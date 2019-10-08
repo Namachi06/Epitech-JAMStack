@@ -1,12 +1,12 @@
 backend:
   name: github
-  repo: liam.fabiano@epitech.eu/WEB_jamstack_2019
+  repo: Namachi06/Epitech-JAMStack
 media_folder: static/assets
 public_folder: assets
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: post
+    label: Post
+    folder: src/content
     create: true
     fields:
       - { name: path, label: Path }
