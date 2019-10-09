@@ -5,6 +5,21 @@ module.exports = {
     author: `Liam, Mohammed`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-offline`,
+    {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+            // Apply gatsby-mdx to both .mdx and .md files
+            extensions: ['.mdx', '.md'],
+            defaultLayout: require.resolve('./src/components/Blog-Post-Layout/index.tsx')
+        }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,6 +35,13 @@ module.exports = {
       },
     },
     {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `blog`,
+          path: `${__dirname}/src/pages/blog`,
+        },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -31,13 +53,5 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-offline`,
   ],
 }
