@@ -13,12 +13,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
     {
-        resolve: `gatsby-plugin-mdx`,
-        options: {
-            // Apply gatsby-mdx to both .mdx and .md files
-            extensions: ['.mdx', '.md'],
-            defaultLayout: require.resolve('./src/components/Blog-Post-Layout/index.tsx')
-        }
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/components/Post-Layout/index.tsx"),
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

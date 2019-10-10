@@ -1,18 +1,17 @@
 import React from "react"
-import Helmet from "react-helmet"
+import SEO from "../SEO"
 import Layout from "../Layout"
 
-const BlogPostLayout = ({children, pageContext}) => {
+function BlogPostLayout({children, pageContext}) {
   const {title, author, date} = pageContext.frontmatter
   return (
     <Layout>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
+      <SEO title={title} />
       <article>
         <header>
           <h1>{title}</h1>
           <span>Author: {author}</span>
+          <br />
           <time>Date: {date}</time>
         </header>
         {children}

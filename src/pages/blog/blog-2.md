@@ -5,4 +5,4 @@ date: 2019-10-07
 author: "Liam"
 ---
 
-# Blog 2
+This is blog 2 content

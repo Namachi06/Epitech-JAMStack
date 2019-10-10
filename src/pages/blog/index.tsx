@@ -1,21 +1,21 @@
 import React from "react"
 import {graphql, Link} from "gatsby"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO";
 
-const BlogIndex = ({data}) => {
+function BlogIndex({data}) {
   const {edges: posts} = data.allMdx
   return (
     <Layout>
-      <SEO title="Blog page" />
       {posts.map(({node}) => {
         const {title, author} = node.frontmatter
         return (
           <div key={node.id}>
             <header>
-              <Link to={node.fields.slug}>{title}</Link>
+              <div>{title}</div>
               <div>Posting By {author}</div>
             </header>
+            {/* <p>{node.excerpt}</p> */}
+            <Link to={node.fields.slug}>View Article</Link>
             <hr />
           </div>
         )
@@ -32,12 +32,13 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          # excerpt
+          fields {
+            slug
+          }
           frontmatter {
             title
             author
-          }
-          fields {
-            slug
           }
         }
       }
