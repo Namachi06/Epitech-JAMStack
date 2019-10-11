@@ -74,7 +74,6 @@ import {graphql, StaticQuery} from "gatsby"
 
 class SEO extends React.Component {
   public render() {
-    console.log(this.props)
     const {description, lang, meta, title, site} = this.props
     const metaDescription = description || site.siteMetadata.description
     return (
