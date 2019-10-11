@@ -8,68 +8,119 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import {useStaticQuery, graphql} from "gatsby"
+import {graphql, StaticQuery} from "gatsby"
 
-function SEO({description, lang, meta, title}) {
-  const {site} = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+// function SEO({description, lang, meta, title}) {
+//   const {site} = useStaticQuery(
+//     graphql`
+// query {
+//   site {
+//     siteMetadata {
+//       title
+//       description
+//       author
+//     }
+//   }
+// }
+//     `
+//   )
 
-  const metaDescription = description || site.siteMetadata.description
+//   const metaDescription = description || site.siteMetadata.description
 
-  return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
-  )
+//   return (
+// <Helmet
+//   htmlAttributes={{
+//     lang,
+//   }}
+//   title={title}
+//   titleTemplate={`%s | ${site.siteMetadata.title}`}
+//   meta={[
+//     {
+//       name: `description`,
+//       content: metaDescription,
+//     },
+//     {
+//       property: `og:title`,
+//       content: title,
+//     },
+//     {
+//       property: `og:description`,
+//       content: metaDescription,
+//     },
+//     {
+//       property: `og:type`,
+//       content: `website`,
+//     },
+//     {
+//       name: `twitter:card`,
+//       content: `summary`,
+//     },
+//     {
+//       name: `twitter:creator`,
+//       content: site.siteMetadata.author,
+//     },
+//     {
+//       name: `twitter:title`,
+//       content: title,
+//     },
+//     {
+//       name: `twitter:description`,
+//       content: metaDescription,
+//     },
+//   ].concat(meta)}
+// />
+//   )
+// }
+
+class SEO extends React.Component {
+  public render() {
+    console.log(this.props)
+    const {description, lang, meta, title, site} = this.props
+    const metaDescription = description || site.siteMetadata.description
+    return (
+      <Helmet
+        htmlAttributes={{
+          lang,
+        }}
+        title={title}
+        titleTemplate={`%s | ${site.siteMetadata.title}`}
+        meta={[
+          {
+            name: `description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:title`,
+            content: title,
+          },
+          {
+            property: `og:description`,
+            content: metaDescription,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:creator`,
+            content: site.siteMetadata.author,
+          },
+          {
+            name: `twitter:title`,
+            content: title,
+          },
+          {
+            name: `twitter:description`,
+            content: metaDescription,
+          },
+        ].concat(meta)}
+      />
+    )
+  }
 }
 
 SEO.defaultProps = {
@@ -85,4 +136,21 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default ({description, lang, meta, title}) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `}
+    render={data => (
+      <SEO {...data} title={title} description={description} lang={lang} meta={meta} />
+    )}
+  />
+)
