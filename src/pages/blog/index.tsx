@@ -1,11 +1,13 @@
 import React from "react"
 import {graphql, Link} from "gatsby"
 import Layout from "../../components/Layout"
+import SEO from "../../components/SEO";
 
 function BlogIndex({data}) {
   const {edges: posts} = data.allMdx
   return (
     <Layout>
+      <SEO title={"List"} />
       {posts.map(({node}) => {
         const {title, author, date} = node.frontmatter
         return (
