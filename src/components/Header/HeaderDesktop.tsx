@@ -2,10 +2,11 @@ import React from "react"
 import {Menu, Image} from "semantic-ui-react"
 import {Link} from "gatsby"
 
+import Home from "./Items/Home"
+import Store from "./Items/Store"
 import ShoppingCart from "./Items/ShoppingCart"
 import SignUp from "./Items/SignUp"
 import SignIn from "./Items/SignIn"
-import Logo from "../../assets/svg/cent.svg"
 
 class HeaderDesktop extends React.Component {
   public state = {
@@ -28,8 +29,14 @@ class HeaderDesktop extends React.Component {
             active={activeItem === "home"}
             as={Link}
             onClick={this.handleItemClick}>
-            <Image style={{marginRight: "1em"}} size="mini" src={Logo} alt="Logo Header" />
-            Home
+            <Home name="E-commerce" />
+          </Menu.Item>
+          <Menu.Item
+            name="store"
+            header={true}
+            active={activeItem === "store"}
+            onClick={this.handleItemClick}>
+            <Store name="Shop" />
           </Menu.Item>
         </Menu.Menu>
         <Menu.Menu position="right">
