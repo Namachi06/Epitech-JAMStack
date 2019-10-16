@@ -1,16 +1,16 @@
 import React from "react"
-import {Menu, Image} from "semantic-ui-react"
+import {Menu} from "semantic-ui-react"
 import {Link} from "gatsby"
 
-import Home from "./Items/Home"
-import Store from "./Items/Store"
-import ShoppingCart from "./Items/ShoppingCart"
-import SignUp from "./Items/SignUp"
-import SignIn from "./Items/SignIn"
+import HomeTab from "./Items/HomeTab"
+import StoreTab from "./Items/StoreTab"
+import ShoppingCartTab from "./Items/ShoppingCartTab"
+import SignUpTab from "./Items/SignUpTab"
+import SignInTab from "./Items/SignInTab"
 
 class HeaderDesktop extends React.Component {
   public state = {
-    activeItem: "home",
+    activeItem: this.props.location,
   }
 
   public handleItemClick = (event, {name}) => {
@@ -20,48 +20,54 @@ class HeaderDesktop extends React.Component {
   public render() {
     const {activeItem} = this.state
     return (
-      <Menu fluid={true} borderless={true} size="massive" pointing={true} inverted={true}>
+      <Menu borderless={true} size="massive" pointing={true} inverted={true}>
         <Menu.Menu position="left">
           <Menu.Item
-            name="home"
+            name="/"
             header={true}
             to="/"
-            active={activeItem === "home"}
+            active={activeItem === "/"}
             as={Link}
             onClick={this.handleItemClick}>
-            <Home name="E-commerce" />
+            <HomeTab name="E-commerce" />
           </Menu.Item>
           <Menu.Item
-            name="store"
+            name="/shop/"
             header={true}
-            active={activeItem === "store"}
+            to="/shop/"
+            active={activeItem === "/shop/"}
+            as={Link}
             onClick={this.handleItemClick}>
-            <Store name="Shop" />
+            <StoreTab name="Shop" />
           </Menu.Item>
         </Menu.Menu>
         <Menu.Menu position="right">
           <Menu.Item
-            name="signIn"
+            name="/login/"
             header={true}
-            active={activeItem === "signIn"}
-            onClick={this.handleItemClick}>
-            <SignIn name="Sign in" />
-          </Menu.Item>
-          <Menu.Item
-            name="signup"
-            header={true}
-            active={activeItem === "signup"}
-            onClick={this.handleItemClick}>
-            <SignUp name="Sign up" />
-          </Menu.Item>
-          <Menu.Item
-            name="cart"
-            header={true}
-            to="/cart/"
-            active={activeItem === "cart"}
+            to="/login/"
+            active={activeItem === "/login/"}
             as={Link}
             onClick={this.handleItemClick}>
-            <ShoppingCart name="Cart" itemNumber={0} />
+            <SignInTab name="Sign in" />
+          </Menu.Item>
+          <Menu.Item
+            name="/register/"
+            header={true}
+            to="/register/"
+            active={activeItem === "/register/"}
+            as={Link}
+            onClick={this.handleItemClick}>
+            <SignUpTab name="Sign up" />
+          </Menu.Item>
+          <Menu.Item
+            name="/cart/"
+            header={true}
+            to="/cart/"
+            active={activeItem === "/cart/"}
+            as={Link}
+            onClick={this.handleItemClick}>
+            <ShoppingCartTab name="Cart" itemNumber={0} />
           </Menu.Item>
         </Menu.Menu>
       </Menu>
@@ -69,4 +75,4 @@ class HeaderDesktop extends React.Component {
   }
 }
 
-export default HeaderDesktop
+export default ({location}) => <HeaderDesktop location={location} />

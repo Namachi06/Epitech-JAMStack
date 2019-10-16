@@ -1,15 +1,15 @@
 import React from "react"
 import {Icon} from "semantic-ui-react"
 
-class Store extends React.Component {
+class SignInTab extends React.Component {
   public render() {
     return (
       <div>
-        <Icon style={{paddingRight: "1.4em"}} name="dollar sign" />
+        <Icon style={{paddingRight: "1.4em"}} name="sign in" />
         {this.props.name}
       </div>
     )
   }
 }
 
-export default ({name}) => <Store name={name} />
+export default ({name}) => <SignInTab name={name} />

@@ -3,7 +3,7 @@ import {Image} from "semantic-ui-react"
 
 import Logo from "../../../assets/svg/cent.svg"
 
-class Home extends React.Component {
+class HomeTab extends React.Component {
   public render() {
     return (
       <>
@@ -14,4 +14,4 @@ class Home extends React.Component {
   }
 }
 
-export default ({name}) => <Home name={name} />
+export default ({name}) => <HomeTab name={name} />

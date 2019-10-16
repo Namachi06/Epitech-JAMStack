@@ -8,11 +8,11 @@ import Header from "../Header"
 
 class Layout extends React.Component {
   public render() {
-    const {children} = this.props
+    const {children, location} = this.props
     return (
       <>
         <Headroom>
-          <Header />
+          <Header location={location} />
         </Headroom>
         <Container text={true}>{children}</Container>
       </>
@@ -20,7 +20,7 @@ class Layout extends React.Component {
   }
 }
 
-export default ({children}) => (
+export default ({children, location}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -31,6 +31,6 @@ export default ({children}) => (
         }
       }
     `}
-    render={data => <Layout children={children} {...data} />}
+    render={data => <Layout location={location} children={children} {...data} />}
   />
 )

@@ -1,7 +1,7 @@
 import React from "react"
 import {Icon} from "semantic-ui-react"
 
-class SignUp extends React.Component {
+class SignUpTab extends React.Component {
   public render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default ({name}) => <SignUp name={name} />
+export default ({name}) => <SignUpTab name={name} />

@@ -4,12 +4,13 @@ import HeaderDesktop from "./HeaderDesktop"
 
 class Header extends React.Component {
   public render() {
+    const {location} = this.props
     return (
       <Responsive minWidth={Responsive.onlyComputer.minWidth}>
-        <HeaderDesktop />
+        <HeaderDesktop location={location} />
       </Responsive>
     )
   }
 }
 
-export default Header
+export default ({location}) => <Header location={location} />

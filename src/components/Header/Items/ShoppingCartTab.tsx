@@ -1,7 +1,7 @@
 import React from "react"
 import {Icon} from "semantic-ui-react"
 
-class ShoppingCart extends React.Component {
+class ShoppingCartTab extends React.Component {
   public render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class ShoppingCart extends React.Component {
   }
 }
 
-export default ({itemNumber, name}) => <ShoppingCart itemNumber={itemNumber} name={name} />
+export default ({itemNumber, name}) => <ShoppingCartTab itemNumber={itemNumber} name={name} />

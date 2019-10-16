@@ -2,19 +2,18 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
-class IndexPage extends React.Component {
+class Cart extends React.Component {
   constructor(props) {
     super(props)
   }
 
   public render() {
     return (
-      <Layout location="/">
-        <SEO title="Home" />
-        <h1>Hi people</h1>
+      <Layout location="/cart/">
+        <SEO title="Cart" />
       </Layout>
     )
   }
 }
 
-export default IndexPage
+export default Cart
