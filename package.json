@@ -27,12 +27,15 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
+    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
+    "@types/react-headroom": "^2.2.1",
     "prettier": "^1.18.2",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
