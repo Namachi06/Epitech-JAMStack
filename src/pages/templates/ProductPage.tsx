@@ -1,6 +1,6 @@
 import React from "react"
-import SEO from "../SEO"
-import Layout from "../Layout"
+import SEO from "../../components/SEO"
+import Layout from "../../components/Layout"
 
 class BlogPostLayout extends React.Component {
   public render() {

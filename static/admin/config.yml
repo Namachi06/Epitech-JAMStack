@@ -1,16 +1,20 @@
 backend:
   name: github
   repo: Namachi06/Epitech-JAMStack
-media_folder: static/assets
+media_folder: src/assets
 public_folder: assets
 collections:
-  - name: post
-    label: Post
-    folder: src/pages/blog
+  - name: products
+    label: Product
+    folder: src/pages/products
     create: true
     fields:
+      - { name: title, label: Title }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: author, label: Author }
+      - { name: color, label: Color }
+      - { name: battery, label: Battery }
+      - { name: charger, label: Charger }
+      - { name: frontLed, label: Front LED }
+      - { name: driveSystem, label: Drive system }
       - { name: body, label: Body, widget: markdown }

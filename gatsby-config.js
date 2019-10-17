@@ -37,7 +37,7 @@ module.exports = {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `blog`,
-          path: `${__dirname}/src/pages/blog`,
+          path: `${__dirname}/src/pages/products`,
         },
     },
     {
@@ -45,7 +45,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve("./src/components/Post-Layout/index.tsx"),
+          default: require.resolve("./src/pages/templates/ProductPage.tsx"),
         },
       },
     },
