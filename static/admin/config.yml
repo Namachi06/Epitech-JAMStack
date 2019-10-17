@@ -1,20 +1,88 @@
 backend:
   name: github
   repo: Namachi06/Epitech-JAMStack
-media_folder: src/assets
-public_folder: assets
+media_folder: src/assets/images
+public_folder: src/assets
 collections:
-  - name: products
-    label: Product
+  - name: bike
+    label: Bike
     folder: src/pages/products
     create: true
     fields:
-      - { name: title, label: Title }
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: color, label: Color }
-      - { name: battery, label: Battery }
-      - { name: charger, label: Charger }
-      - { name: frontLed, label: Front LED }
-      - { name: driveSystem, label: Drive system }
-      - { name: body, label: Body, widget: markdown }
+      - {
+          name: title,
+          label: Title
+        }
+      - {
+          name: path,
+          label: Path
+        }
+      - {
+          name: date,
+          label: Date,
+          widget: datetime
+        }
+      - {
+          name: color,
+          label: Color,
+          options: ["Green", "Black", "Grey"],
+          widget: select
+        }
+      - {
+          name: battery,
+          label: Battery,
+          options: [
+            "52v Luna Wolf Samsung 30q 12ah",
+            "52v Luna DireWolf LG MJ1 21ah"
+          ],
+          widget: select
+        }
+      - {
+          name: charger,
+          label: Charger,
+          options: [
+            "52v Standard Lithium Ebike Charger",
+            "52v Mini Luna Charger"
+          ],
+          widget: select
+        }
+      - {
+          name: driveSystem,
+          label: Drive system,
+          options: [
+            "BBSHD",
+            "Luna Ludicrous 2500w"
+          ],
+          widget: select
+        }
+      - {
+          name: frontLed,
+          label: Front LED,
+          options: [
+            "Black Easy Wrap Around Light with White LED",
+            "Blue Easy Wrap Around Light with Blue LED",
+            "Luna Cycle CREE Front Light"
+          ],
+          widget: select
+        }
+      - {
+          name: rearLight,
+          label: Rear Light,
+          options: [
+            "Red Easy Wrap Around Light with Red LED",
+            "LED Rechargeable Rear Light",
+            "S1 Mini Rear Light with Shock Sensor",
+            "X5 Rear Light With Laser"
+          ],
+          widget: select
+        }
+      - {
+          name: image,
+          label: Image,
+          widget: image
+        }
+      - {
+          name: body,
+          label: Body,
+          widget: markdown
+        }

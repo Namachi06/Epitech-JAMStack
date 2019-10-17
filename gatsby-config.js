@@ -22,13 +22,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `svg`,
-        path: `${__dirname}/src/assets/svg`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       },
@@ -36,7 +29,7 @@ module.exports = {
     {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `blog`,
+          name: `products`,
           path: `${__dirname}/src/pages/products`,
         },
     },
@@ -58,7 +51,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/svg/cent.svg`, // This path is relative to the root of the site.
+        icon: `src/assets/images/cent.svg`, // This path is relative to the root of the site.
       },
     },
   ],

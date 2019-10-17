@@ -1,7 +1,7 @@
 import React from "react"
 import {Image} from "semantic-ui-react"
 
-import Logo from "../../../assets/svg/cent.svg"
+import Logo from "../../../assets/images/cent.svg"
 
 class HomeTab extends React.Component {
   public render() {
