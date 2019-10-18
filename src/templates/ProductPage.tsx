@@ -1,23 +1,14 @@
 import React from "react"
 import SEO from "../components/SEO"
 import Layout from "../components/Layout"
-import {StaticQuery, graphql} from "gatsby"
+import {graphql} from "gatsby"
 
-class BlogPostLayout extends React.Component {
+class ProductPage extends React.Component {
   public render() {
     const post = this.props.data.markdownRemark
-    console.log(this.props)
     return (
       <Layout location={"/shop/"}>
         <SEO title={post.frontmatter.title} />
-        {/* <article>
-          <header>
-            <h1>{title}</h1>
-            <br />
-            <time>Date: {date}</time>
-          </header>
-          {this.props.children}
-        </article> */}
       </Layout>
     )
   }
@@ -42,4 +33,4 @@ export const query = graphql`
   }
 `
 
-export default BlogPostLayout
+export default ProductPage
