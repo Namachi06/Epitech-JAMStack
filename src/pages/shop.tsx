@@ -47,7 +47,7 @@ export default () => (
               frontmatter {
                 featuredImage {
                   childImageSharp {
-                    sizes(maxWidth: 400) {
+                    sizes(maxWidth: 700) {
                       ...GatsbyImageSharpSizes
                     }
                   }
