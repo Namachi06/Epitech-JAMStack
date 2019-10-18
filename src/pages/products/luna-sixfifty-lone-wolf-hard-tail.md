@@ -8,6 +8,6 @@ charger: 52v Mini Luna Charger
 driveSystem: Luna Ludicrous 2500w
 frontLed: Luna Cycle CREE Front Light
 rearLight: LED Rechargeable Rear Light
-image: /src/assets/luna_sixfifty_lone_wolf_hard_tail.jpg
+featuredImage: ./src/assets/images/luna_sixfifty_lone_wolf_hard_tail.jpg
 ---
 This is the Luna SixFifty Lone Wolf Hard Tail post

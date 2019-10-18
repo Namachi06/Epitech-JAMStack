@@ -1,18 +1,40 @@
-const { createFilePath } = require('gatsby-source-filesystem')
-
-// Here we're adding extra stuff to the "node" (like the slug)
-// so we can query later for all blogs and get their slug
-exports.onCreateNode = ({ node, actions, getNode }) => {
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode })
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
-      // Individual MDX node
       node,
-      // Name of the field you are adding
-      name: 'slug',
-      // Generated value based on filepath with "blog" prefix
-      value: `${value}`
+      name: `slug`,
+      value: slug,
     })
   }
+}
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/ProductPage.tsx`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.fields.slug,
+      },
+    })
+  })
 }

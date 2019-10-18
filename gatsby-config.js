@@ -10,8 +10,19 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        // It's important to specify the maxWidth (in pixels) of
+        // the content container as this plugin uses this as the
+        // base for generating different widths of each image.
+        maxWidth: 700,
+        linkImagesToOriginal: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,15 +43,6 @@ module.exports = {
           name: `products`,
           path: `${__dirname}/src/pages/products`,
         },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve("./src/pages/templates/ProductPage.tsx"),
-        },
-      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

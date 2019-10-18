@@ -7,6 +7,6 @@ battery: 52v Luna Wolf Samsung 30q 12ah
 charger: 52v Standard Lithium Ebike Charger
 frontLed: Black Easy Wrap Around Light with White LED
 driveSystem: BBSHD
-image: /src/assets/sur_ron_x_bike_black_edition.jpg
+featuredImage: ./src/assets/images/sur_ron_x_bike_black_edition.jpg
 ---
 Sur Ron X Bike Black Edition post
