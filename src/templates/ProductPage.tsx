@@ -24,7 +24,6 @@ export const query = graphql`
         date
         driveSystem
         frontLed
-        featuredImage
         path
         rearLight
         title

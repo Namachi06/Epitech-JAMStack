@@ -8,6 +8,6 @@ charger: 52v Standard Lithium Ebike Charger
 driveSystem: Luna Ludicrous 2500w
 frontLed: Black Easy Wrap Around Light with White LED
 rearLight: X5 Rear Light With Laser
-image: /src/assets/luna_cycle_apollo.png
+featuredImage: /src/assets/luna_cycle_apollo.png
 ---
 This is the Luna Cycle Apollo

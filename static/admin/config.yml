@@ -77,7 +77,7 @@ collections:
           widget: select
         }
       - {
-          name: image,
+          name: featuredImage,
           label: Image,
           widget: image
         }

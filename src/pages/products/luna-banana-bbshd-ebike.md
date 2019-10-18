@@ -8,6 +8,6 @@ charger: 52v Mini Luna Charger
 driveSystem: BBSHD
 frontLed: Luna Cycle CREE Front Light
 rearLight: LED Rechargeable Rear Light
-image: /src/assets/luna_banana_bbshd_ebike.png
+featuredImage: /src/assets/luna_banana_bbshd_ebike.png
 ---
 This is the Luna Banana BBSHD eBike
