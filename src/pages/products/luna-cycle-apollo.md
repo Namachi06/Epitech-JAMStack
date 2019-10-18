@@ -2,6 +2,7 @@
 title: Luna Cycle Apollo
 path: luna-cycle-apollo
 date: 2019-10-18T12:57:07.296Z
+price: 4203
 color: Black
 battery: 52v Luna Wolf Samsung 30q 12ah
 charger: 52v Standard Lithium Ebike Charger

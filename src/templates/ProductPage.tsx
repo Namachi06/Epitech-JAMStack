@@ -27,6 +27,7 @@ export const query = graphql`
         path
         rearLight
         title
+        price
       }
     }
   }

@@ -1,9 +1,8 @@
 import React from "react"
-import {Image} from "semantic-ui-react"
-import {graphql, Link, StaticQuery} from "gatsby"
-import Img from "gatsby-image"
+import {graphql, StaticQuery} from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import ProductList from "../components/ProductList";
 
 class Shop extends React.Component {
   constructor(props) {
@@ -12,24 +11,10 @@ class Shop extends React.Component {
 
   public render() {
     const {edges: products} = this.props.allMarkdownRemark
-    console.log(products)
     return (
       <Layout location="/shop/">
         <SEO title="Shop" />
-        {products.map(({node}) => {
-          const {title, date, featuredImage} = node.frontmatter
-          return (
-            <div key={node.id}>
-              <header>
-                <div>{title}</div>
-                <div>{date}</div>
-                <Img sizes={featuredImage.childImageSharp.sizes} />
-              </header>
-              <Link to={node.fields.slug}>View Article</Link>
-              <hr />
-            </div>
-          )
-        })}
+        <ProductList products={products} />
       </Layout>
     )
   }
@@ -61,6 +46,7 @@ export default () => (
                 path
                 rearLight
                 title
+                price
               }
               fields {
                 slug

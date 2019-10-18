@@ -2,6 +2,7 @@
 title: Luna Banana BBSHD eBike
 path: /luna-banana-bbshd-ebike
 date: 2019-10-18T12:54:24.994Z
+price: 2493
 color: Black
 battery: 52v Luna DireWolf LG MJ1 21ah
 charger: 52v Mini Luna Charger

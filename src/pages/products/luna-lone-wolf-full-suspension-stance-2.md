@@ -2,6 +2,7 @@
 title: Luna Lone Wolf Full Suspension Stance 2
 path: /luna-lone-wolf-full-suspension-stance-2
 date: 2019-10-22T02:06:00.000Z
+price: 2123
 color: Black
 battery: 52v Luna Wolf Samsung 30q 12ah
 charger: 52v Standard Lithium Ebike Charger

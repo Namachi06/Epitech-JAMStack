@@ -2,6 +2,7 @@
 title: Luna Lone Wolf Roam Ebike
 path: /luna-lone-wolf-roam-ebike
 date: 2019-10-20T00:03:31.021Z
+price: 1233
 color: Green
 battery: 52v Luna DireWolf LG MJ1 21ah
 charger: 52v Mini Luna Charger

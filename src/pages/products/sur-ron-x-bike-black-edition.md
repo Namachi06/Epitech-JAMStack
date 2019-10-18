@@ -2,6 +2,7 @@
 title: Sur Ron X Bike Black Edition
 path: /sur-ron-x-bike-black-edition
 date: 2019-09-30T01:24:35.835Z
+price: 7129
 color: Black
 battery: 52v Luna DireWolf LG MJ1 21ah
 charger: 52v Mini Luna Charger

@@ -23,6 +23,10 @@ collections:
           widget: datetime
         }
       - {
+          name: price,
+          label: Price
+        }
+      - {
           name: color,
           label: Color,
           options: ["Green", "Black", "Grey"],

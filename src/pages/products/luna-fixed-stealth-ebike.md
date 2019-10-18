@@ -2,6 +2,7 @@
 title: Luna Fixed Stealth Ebike
 path: /luna-fixed-stealth-ebike
 date: 2019-10-18T14:12:16.992Z
+price: 9403
 color: Black
 battery: 52v Luna Wolf Samsung 30q 12ah
 charger: 52v Mini Luna Charger
