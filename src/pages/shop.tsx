@@ -15,7 +15,7 @@ class Shop extends React.Component {
       <Layout location="/shop/">
         <SEO title="Shop" />
         {products.map(({node}) => {
-          const {title, date, featuredImage} = node.frontmatter
+          const {title, date} = node.frontmatter
           return (
             <div key={node.id}>
               <header>
@@ -48,7 +48,6 @@ export default () => (
                 date
                 driveSystem
                 frontLed
-                featuredImage
                 path
                 rearLight
                 title
