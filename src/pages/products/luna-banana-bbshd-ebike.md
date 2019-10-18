@@ -1,6 +1,6 @@
 ---
 title: Luna Banana BBSHD eBike
-path: /luna_banana_bbshd_ebike
+path: /luna-banana-bbshd-ebike
 date: 2019-10-18T12:54:24.994Z
 color: Black
 battery: 52v Luna DireWolf LG MJ1 21ah
