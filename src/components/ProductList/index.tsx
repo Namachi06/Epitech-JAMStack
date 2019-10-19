@@ -11,12 +11,14 @@ class ProductList extends React.Component {
         to: fields.slug,
         childKey: id,
         header: frontmatter.title,
+        fluid: true,
         meta: <Card.Meta style={{color: "dimgray"}}>{frontmatter.price} $</Card.Meta>,
         image: (
-          <Image>
+          <Image wrapped={true} ui={false}>
             <Img
-              sizes={frontmatter.featuredImage.childImageSharp.sizes}
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
               alt={frontmatter.title}
+              key={frontmatter.featuredImage.childImageSharp.fluid.src}
               style={{background: "#ffffff"}}
             />
           </Image>
@@ -29,7 +31,7 @@ class ProductList extends React.Component {
     return (
       <Card.Group
         items={this.listProductsToItems(this.props.products)}
-        itemsPerRow={2}
+        itemsPerRow={3}
         stackable={true}
       />
     )

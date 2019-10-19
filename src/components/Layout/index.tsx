@@ -1,5 +1,4 @@
 import React from "react"
-import {Container} from "semantic-ui-react"
 import {graphql, StaticQuery} from "gatsby"
 import Headroom from "react-headroom"
 import "semantic-ui-css/semantic.min.css"
@@ -14,7 +13,7 @@ class Layout extends React.Component {
         <Headroom>
           <Header location={location} />
         </Headroom>
-        <Container text={true}>{children}</Container>
+        <div style={{margin: "5em"}}>{children}</div>
       </>
     )
   }
