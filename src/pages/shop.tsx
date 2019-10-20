@@ -13,6 +13,7 @@ class Shop extends React.Component {
 
   public render() {
     const {edges: products} = this.props.allMarkdownRemark
+    const design = this.props.dataJson.productsPage.design
     return (
       <Layout location="/shop/">
         <SEO title="Shop" />
@@ -27,7 +28,7 @@ class Shop extends React.Component {
           </Header.Content>
           <Header.Subheader>Here you can see the list of our products.</Header.Subheader>
         </Header>
-        <ProductList products={products} />
+        <ProductList design={design} products={products} />
       </Layout>
     )
   }
@@ -42,6 +43,9 @@ export default () => (
           edges {
             node {
               id
+              internal {
+                content
+              }
               frontmatter {
                 featuredImage {
                   childImageSharp {
@@ -65,6 +69,11 @@ export default () => (
                 slug
               }
             }
+          }
+        }
+        dataJson {
+          productsPage {
+            design
           }
         }
       }
