@@ -4,6 +4,7 @@ import Headroom from "react-headroom"
 import "semantic-ui-css/semantic.min.css"
 
 import Header from "../Header"
+import Footer from "../Footer"
 
 class Layout extends React.Component {
   public render() {
@@ -22,6 +23,7 @@ class Layout extends React.Component {
           }}>
           {children}
         </div>
+        <Footer />
       </>
     )
   }
