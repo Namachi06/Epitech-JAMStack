@@ -23,6 +23,10 @@ collections:
           widget: datetime
         }
       - {
+          name: description,
+          label: Description
+        }
+      - {
           name: price,
           label: Price
         }

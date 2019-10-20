@@ -10,10 +10,18 @@ class Layout extends React.Component {
     const {children, location} = this.props
     return (
       <>
-        <Headroom>
+        <Headroom upTolerance={10} downTolerance={10} style={{zIndex: "20"}}>
           <Header location={location} />
         </Headroom>
-        <div style={{margin: "5em"}}>{children}</div>
+        <div
+          style={{
+            marginRight: "5em",
+            marginLeft: "5em",
+            marginBottom: "5em",
+            marginTop: "2em",
+          }}>
+          {children}
+        </div>
       </>
     )
   }
