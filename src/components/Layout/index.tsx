@@ -19,7 +19,8 @@ class Layout extends React.Component {
             marginRight: "5em",
             marginLeft: "5em",
             marginBottom: "5em",
-            marginTop: "2em",
+            marginTop: "5em",
+            minHeight: "80vh",
           }}>
           {children}
         </div>
